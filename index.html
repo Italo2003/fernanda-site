@@ -1,76 +1,159 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fernanda Mayara - Terapia Ocupacional</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f3f4f6;
-      color: #1f2937;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fernanda Mayara - Terapia Ocupacional</title>
+<style>
+  /* Reset básico */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 480px;
+    width: 100%;
+    background: #f7fbff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 96, 204, 0.1);
+    padding: 30px 25px;
+    text-align: center;
+  }
+
+  h1 {
+    color: #005bbb;
+    margin-bottom: 10px;
+    font-size: 1.9rem;
+  }
+
+  .location, .specialty, .contact {
+    font-size: 1rem;
+    margin: 6px 0;
+    color: #555;
+  }
+
+  a.email-link {
+    color: #005bbb;
+    text-decoration: none;
+    word-break: break-word;
+  }
+  a.email-link:hover {
+    text-decoration: underline;
+  }
+
+  .btn-whatsapp {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 14px 30px;
+    margin-top: 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+  }
+
+  .btn-whatsapp:hover {
+    background-color: #1ebe5c;
+  }
+
+  /* Símbolo do quebra-cabeça */
+  .puzzle-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+  }
+
+  /* Seção de benefícios */
+  .benefits {
+    text-align: left;
+    margin-top: 30px;
+    background: #e1f0ff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    color: #004a99;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .benefits h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #003366;
+  }
+
+  .benefits ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .benefits li {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 480px) {
     .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      margin-top: 4rem;
+      padding: 25px 20px;
+      max-width: 95%;
     }
     h1 {
-      color: #111827;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.6rem;
     }
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
+    .btn-whatsapp {
+      width: 100%;
+      padding: 14px 0;
+      font-size: 1.1rem;
     }
-    .highlight {
-      color: #3b82f6;
-      font-weight: 600;
-    }
-    .cta-button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #3b82f6;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-    .cta-button:hover {
-      background-color: #2563eb;
-    }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #6b7280;
-      text-align: center;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
   <div class="container">
+    <!-- Símbolo do autismo (quebra-cabeça colorido simplificado) -->
+    <svg class="puzzle-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Símbolo do Autismo" role="img" >
+      <path fill="#005bbb" d="M17 9a8 8 0 0 0-8 8v8h8v-4h4v-4H17z"/>
+      <path fill="#ffd43b" d="M47 9h-8v4h-4v4h4v4h8v-8a8 8 0 0 0-4-4z"/>
+      <path fill="#ff6f61" d="M17 47a8 8 0 0 1 8-8h8v8h-4v4h-4v-4h-8z"/>
+      <path fill="#00a86b" d="M47 47v-8h-8v4h-4v4h4v4h8a8 8 0 0 1 0-4z"/>
+    </svg>
+
     <h1>Fernanda Mayara Da Silva Leite</h1>
-    <p><strong>Estudante de Terapia Ocupacional</strong> - Recife, PE</p>
-    <p>Fernanda oferece atendimentos supervisionados focados em <span class="highlight">autismo</span>, com abordagens humanizadas e centradas nas necessidades individuais de cada criança.</p>
-    <p>Se você está buscando apoio, informação ou deseja saber mais sobre os benefícios da Terapia Ocupacional no desenvolvimento de crianças com TEA, entre em contato!</p>
+    <p class="location"><strong>Localização:</strong> Recife - PE</p>
+    <p class="specialty"><strong>Especialidade:</strong> Terapia Ocupacional para Autismo</p>
+    <p class="contact"><strong>Contato:</strong> <a class="email-link" href="mailto:Italosantos57053@gmail.com">Italosantos57053@gmail.com</a></p>
 
-    <a class="cta-button" href="https://wa.me/5581997469505?text=Olá%2C+gostaria+de+saber+mais+sobre+Terapia+Ocupacional+para+autismo" target="_blank">
-      Agendar via WhatsApp
-    </a>
+    <a
+      href="https://wa.me/5581997469505"
+      class="btn-whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Entrar em contato pelo WhatsApp</a
+    >
 
-    <footer>
-      Contato: nandaleyte2@gmail.com
-    </footer>
+    <section class="benefits" aria-label="Benefícios do tratamento precoce do autismo">
+      <h2>Benefícios de tratar o autismo desde o início</h2>
+      <ul>
+        <li>Desenvolvimento aprimorado das habilidades sociais e de comunicação.</li>
+        <li>Redução de comportamentos desafiadores e aumento da adaptação.</li>
+        <li>Melhoria na autonomia e independência da criança.</li>
+        <li>Maior qualidade de vida para a criança e sua família.</li>
+        <li>Maior probabilidade de sucesso em contextos escolares e sociais.</li>
+      </ul>
+    </section>
   </div>
 </body>
 </html>
