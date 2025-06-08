@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Fernanda Mayara - Terapia Ocupacional</title>
 <style>
-  /* Reset básico */
   * {
     box-sizing: border-box;
   }
@@ -13,35 +12,49 @@
   body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #ffffff;
+    background: linear-gradient(to bottom, #f0f8ff, #ffffff);
     color: #333333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 20px;
+    animation: fadeIn 1s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .container {
     max-width: 480px;
     width: 100%;
     background: #f7fbff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 96, 204, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 96, 204, 0.15);
     padding: 30px 25px;
     text-align: center;
+    animation: slideUp 1s ease-out;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   h1 {
     color: #005bbb;
     margin-bottom: 10px;
-    font-size: 1.9rem;
+    font-size: 2rem;
+    animation: fadeIn 1.2s ease;
   }
 
   .location, .specialty, .contact {
     font-size: 1rem;
     margin: 6px 0;
     color: #555;
+    animation: fadeIn 1.4s ease;
   }
 
   a.email-link {
@@ -49,36 +62,50 @@
     text-decoration: none;
     word-break: break-word;
   }
+
   a.email-link:hover {
     text-decoration: underline;
   }
 
-  .btn-whatsapp {
+  .btn-whatsapp, .btn-agendamento {
     display: inline-block;
-    background-color: #25d366;
-    color: white;
     padding: 14px 30px;
-    margin-top: 25px;
+    margin-top: 20px;
     border-radius: 30px;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+  }
+
+  .btn-agendamento {
+    background-color: #0072ff;
+    color: white;
+    margin-left: 10px;
   }
 
   .btn-whatsapp:hover {
     background-color: #1ebe5c;
+    transform: scale(1.03);
   }
 
-  /* Símbolo do quebra-cabeça */
+  .btn-agendamento:hover {
+    background-color: #005dc1;
+    transform: scale(1.03);
+  }
+
   .puzzle-icon {
     width: 80px;
     height: 80px;
     margin: 0 auto 20px;
   }
 
-  /* Seção de benefícios */
   .benefits {
     text-align: left;
     margin-top: 30px;
@@ -87,7 +114,7 @@
     border-radius: 10px;
     color: #004a99;
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   .benefits h2 {
@@ -111,20 +138,18 @@
       max-width: 95%;
     }
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
     }
-    .btn-whatsapp {
+    .btn-whatsapp, .btn-agendamento {
       width: 100%;
-      padding: 14px 0;
-      font-size: 1.1rem;
+      margin: 10px 0;
     }
   }
 </style>
 </head>
 <body>
   <div class="container">
-    <!-- Símbolo do autismo (quebra-cabeça colorido simplificado) -->
-    <svg class="puzzle-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Símbolo do Autismo" role="img" >
+    <svg class="puzzle-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Símbolo do Autismo" role="img">
       <path fill="#005bbb" d="M17 9a8 8 0 0 0-8 8v8h8v-4h4v-4H17z"/>
       <path fill="#ffd43b" d="M47 9h-8v4h-4v4h4v4h8v-8a8 8 0 0 0-4-4z"/>
       <path fill="#ff6f61" d="M17 47a8 8 0 0 1 8-8h8v8h-4v4h-4v-4h-8z"/>
@@ -136,13 +161,13 @@
     <p class="specialty"><strong>Especialidade:</strong> Terapia Ocupacional para Autismo</p>
     <p class="contact"><strong>Contato:</strong> <a class="email-link" href="mailto:nandaleyte2@gmail.com">nandaleyte2@gmail.com</a></p>
 
-    <a
-      href="https://wa.me/5581997469505"
-      class="btn-whatsapp"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Entrar em contato pelo WhatsApp</a
-    >
+    <a href="https://wa.me/5581997469505" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+      Entrar em contato pelo WhatsApp
+    </a>
+
+    <a href="https://calendly.com/seu-link-de-agendamento" class="btn-agendamento" target="_blank" rel="noopener noreferrer">
+      Agendar Consulta
+    </a>
 
     <section class="benefits" aria-label="Benefícios do tratamento precoce do autismo">
       <h2>Benefícios de tratar o autismo desde o início</h2>
@@ -157,3 +182,4 @@
   </div>
 </body>
 </html>
+
