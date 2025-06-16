@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fernanda Mayara - Terapia Ocupacional</title>
-  
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!-- Alpine.js -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  
+
   <!-- AOS (Animações ao rolar) -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  
+
   <script>
     document.addEventListener('alpine:init', () => {
       AOS.init();
@@ -22,8 +22,9 @@
   </script>
 </head>
 <body class="bg-gradient-to-b from-blue-50 to-white text-gray-800 min-h-screen flex items-center justify-center p-4">
-  <div class="max-w-lg w-full bg-white rounded-2xl shadow-2xl p-6 text-center" x-data="{ showMore: false, showModal: false }" data-aos="fade-up">
-    
+  <div class="max-w-lg w-full bg-white rounded-2xl shadow-2xl p-6 text-center" 
+       x-data="{ showModal: false, showLearnMore: false }" data-aos="fade-up">
+
     <!-- Ícone -->
     <svg class="w-20 h-20 mx-auto mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Símbolo do Autismo" role="img">
       <path fill="#005bbb" d="M17 9a8 8 0 0 0-8 8v8h8v-4h4v-4H17z"/>
@@ -60,31 +61,48 @@
 
     <!-- Benefícios -->
     <section class="mt-8 text-left bg-blue-50 p-5 rounded-xl" data-aos="fade-up">
-      <h2 class="text-lg font-semibold text-blue-800 mb-2">Benefícios de tratar o autismo desde o início</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
-        <li>Desenvolvimento aprimorado das habilidades sociais e de comunicação.</li>
-        <li>Redução de comportamentos desafiadores e aumento da adaptação.</li>
-        <li>Melhoria na autonomia e independência da criança.</li>
-        <li>Maior qualidade de vida para a criança e sua família.</li>
-        <li>Maior probabilidade de sucesso em contextos escolares e sociais.</li>
+      <h2 class="text-lg font-semibold text-blue-800 mb-3">Benefícios da Terapia Ocupacional no tratamento do autismo desde cedo</h2>
+      <p class="text-sm text-gray-700 mb-4">
+        A intervenção precoce com Terapia Ocupacional é essencial para crianças no espectro autista, pois atua de forma integrada no desenvolvimento de suas habilidades motoras, sensoriais, cognitivas e sociais. Ao ser iniciada nos primeiros anos de vida, a terapia oferece benefícios significativos para o bem-estar da criança e da família.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+        <li><strong>Desenvolvimento da comunicação:</strong> estimula a compreensão e expressão verbal e não verbal, ajudando na construção de linguagem e interação social.</li>
+        <li><strong>Estímulo à autonomia:</strong> promove a independência da criança em atividades do dia a dia, como se alimentar, vestir-se e realizar sua higiene pessoal.</li>
+        <li><strong>Regulação sensorial:</strong> ajuda a criança a lidar melhor com estímulos do ambiente, como sons, cheiros, texturas e luzes, promovendo conforto e concentração.</li>
+        <li><strong>Fortalecimento das habilidades motoras:</strong> melhora a coordenação motora fina e grossa, contribuindo para maior participação em atividades escolares e recreativas.</li>
+        <li><strong>Redução de comportamentos desafiadores:</strong> com intervenções personalizadas, a criança aprende alternativas mais adaptativas de comunicação e comportamento.</li>
+        <li><strong>Apoio à família:</strong> os terapeutas também orientam os responsáveis, oferecendo suporte emocional e estratégias para o dia a dia em casa.</li>
+        <li><strong>Facilitação da inclusão:</strong> contribui para que a criança se insira com mais segurança e participação em ambientes escolares e sociais.</li>
       </ul>
+
+      <div class="mt-4">
+        <button @click="showLearnMore = true" class="text-sm text-blue-700 hover:underline">Saiba mais sobre a Terapia Ocupacional</button>
+      </div>
     </section>
 
-    <!-- Modal com Alpine.js -->
+    <!-- Modal 1: O que é TO -->
     <div class="mt-6">
-      <button @click="showModal = true"
-              class="text-sm text-blue-700 hover:underline">
-        Como funciona a Terapia Ocupacional?
-      </button>
+      <button @click="showModal = true" class="text-sm text-blue-700 hover:underline">O que é a Terapia Ocupacional?</button>
     </div>
 
+    <!-- Modal: O que é a TO -->
     <div x-show="showModal" x-transition class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div class="bg-white rounded-xl p-6 max-w-sm mx-auto shadow-lg relative" @click.away="showModal = false">
         <button @click="showModal = false" class="absolute top-2 right-3 text-gray-400 hover:text-red-500 text-xl">&times;</button>
         <h3 class="text-lg font-semibold text-blue-700 mb-2">O que é a Terapia Ocupacional?</h3>
         <p class="text-sm text-gray-600">
-          A Terapia Ocupacional ajuda crianças com autismo a desenvolver habilidades funcionais para o dia a dia,
-          promovendo autonomia e integração social de forma personalizada e respeitosa.
+          A Terapia Ocupacional é uma área da saúde que ajuda pessoas com dificuldades físicas, sensoriais ou cognitivas a desenvolverem a independência e a qualidade de vida no seu cotidiano, promovendo inclusão e funcionalidade nas atividades diárias.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal 2: Saiba mais -->
+    <div x-show="showLearnMore" x-transition class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div class="bg-white rounded-xl p-6 max-w-sm mx-auto shadow-lg relative" @click.away="showLearnMore = false">
+        <button @click="showLearnMore = false" class="absolute top-2 right-3 text-gray-400 hover:text-red-500 text-xl">&times;</button>
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">Mais sobre a Terapia Ocupacional</h3>
+        <p class="text-sm text-gray-600">
+          A TO é adaptada às necessidades únicas de cada criança. Utiliza atividades lúdicas e funcionais para estimular a atenção, o foco, as habilidades sociais e a coordenação. É essencial no apoio à criança com autismo em casa, na escola e na comunidade.
         </p>
       </div>
     </div>
